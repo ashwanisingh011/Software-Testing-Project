@@ -1,7 +1,7 @@
-BusGo - React Bus Booking Application
+## BusGo - React Bus Booking Application
 Welcome to BusGo, a modern, single-page bus booking application built with React.js and styled with Tailwind CSS. This project provides a complete user flow for searching, selecting, and booking bus tickets, all within a sleek and responsive interface.
 
-Features
+## Features
 👤 User Session: A simple login page to simulate a user session.
 
 🔍 Bus Search: An intuitive form to search for buses between major cities on a specific date.
@@ -18,7 +18,7 @@ Features
 
 ✨ Modern Styling: A stylish UI with a custom font (Inter), subtle gradients, and custom scrollbars for a premium feel.
 
-Tech Stack
+## Tech Stack
 Frontend: React.js (v16.8+ for Hooks)
 
 Styling: Tailwind CSS (v3)
@@ -37,7 +37,7 @@ Create a React App:
 npx create-react-app busgo-app
 cd busgo-app
 
-Install Tailwind CSS:
+## Install Tailwind CSS:
 
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
@@ -56,7 +56,7 @@ module.exports = {
   plugins: [],
 }
 
-Include Tailwind in your CSS:
+## Include Tailwind in your CSS:
 Replace the contents of ./src/index.css with the global styles and Tailwind directives. (You can copy the code from the src/index.css file we created).
 
 Add the Main Application Code:
