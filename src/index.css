@@ -1,0 +1,63 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* These are the essential Tailwind directives. Keep them at the top. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply custom global styles */
+@layer base {
+  body {
+    /* Set the default font for the entire application */
+    font-family: 'Inter', sans-serif;
+    
+    /* Adding a subtle, stylish gradient background */
+    background-color: #f8fafc; /* fallback color */
+    background-image: radial-gradient(circle at top right, rgb(127 29 252 / 0.05), transparent),
+                      radial-gradient(circle at bottom left, rgb(127 29 252 / 0.05), transparent);
+    background-attachment: fixed;
+  }
+
+  /* A simple animation you can add to elements for a fade-in effect */
+  .fade-in {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+/* Define custom utility classes */
+@layer utilities {
+  /* Custom scrollbar for a more modern look (works in WebKit browsers like Chrome/Safari) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c4b5fd; /* A soft indigo color */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a78bfa; /* A slightly darker indigo on hover */
+  }
+}
+
+/* Define custom keyframe animations */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
