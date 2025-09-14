@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import MyBus from "./assets/Images/MyBus.jpg"; 
+import Mumbaiimg from "./assets/Images/Mumbai.jpg";
+import Jaipurimg from "./assets/Images/Jaipur.jpg";
+import puneimg from "./assets/Images/Pune.jpg";
+import chennaiimg from "./assets/Images/Chennai.jpg"
 // --- SVG ICONS ---
 // Using custom SVG components for a consistent and high-quality look.
 const ICONS = {
@@ -445,22 +449,22 @@ function Home({ searchQuery, setSearchQuery, onSearch }) {
 
 function FeaturedDestinations() {
     const destinations = [
-        { from: 'Ahmedabad', to: 'Mumbai', img: 'https://images.unsplash.com/photo-1562979314-1906a2375934?q=80&w=1974&auto=format&fit=crop' },
-        { from: 'Delhi', to: 'Jaipur', img: 'https://images.unsplash.com/photo-1599661046223-e06587063459?q=80&w=2070&auto=format&fit=crop' },
-        { from: 'Mumbai', to: 'Pune', img: 'https://images.unsplash.com/photo-1568288514102-53f77398516f?q=80&w=2070&auto=format&fit=crop' },
-        { from: 'Bangalore', to: 'Chennai', img: 'https://images.unsplash.com/photo-1582510003544-6ef8e860143a?q=80&w=2070&auto=format&fit=crop' },
+        { from: 'Ahmedabad', to: 'Mumbai', img: Mumbaiimg },
+        { from: 'Delhi', to: 'Jaipur', img: Jaipurimg },
+        { from: 'Mumbai', to: 'Pune', img: puneimg },
+        { from: 'Bangalore', to: 'Chennai', img: chennaiimg },
     ];
     return (
         <div className="mt-16">
             <h2 className="text-3xl font-extrabold text-slate-800 text-center">Featured Destinations</h2>
             <p className="mt-2 text-slate-600 max-w-2xl mx-auto text-center">Explore popular routes and book your next trip with ease.</p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {destinations.map(d => (
-                    <div key={`${d.from}-${d.to}`} className="relative rounded-xl overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src={d.img} alt={`${d.from} to ${d.to}`} className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500" />
+                {destinations.map( (place, index) => (
+                    <div key={`${place.from}-${place.to}`} className="relative rounded-xl overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src={place.img} alt={`${place.from} to ${place.to}`} className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div className="absolute bottom-0 left-0 p-4 text-white">
-                            <h3 className="text-xl font-bold">{d.from} to {d.to}</h3>
+                            <h3 className="text-xl font-bold">{place.from} to {place.to}</h3>
                             <button className="mt-2 text-sm font-semibold bg-indigo-500 px-3 py-1 rounded-full hover:bg-indigo-400 transition-colors">Book Now</button>
                         </div>
                     </div>
