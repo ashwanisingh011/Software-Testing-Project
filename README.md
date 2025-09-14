@@ -54,7 +54,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+} 
 
 ## Include Tailwind in your CSS:
 Replace the contents of ./src/index.css with the global styles and Tailwind directives. (You can copy the code from the src/index.css file we created).
