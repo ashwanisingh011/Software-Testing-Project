@@ -476,9 +476,9 @@ function FeaturedDestinations() {
 
 function Testimonials() {
     const reviews = [
-        { name: 'Priya Sharma', location: 'Mumbai', rating: 5, review: "Booking with BusGo was a breeze! The app is so user-friendly and I found the perfect bus in minutes. Highly recommended!" },
-        { name: 'Amit Singh', location: 'Delhi', rating: 4, review: "Great service and comfortable journey. The live tracking feature is a game-changer. Will definitely use BusGo again." },
-        { name: 'Sunita Patel', location: 'Ahmedabad', rating: 5, review: "I was impressed with the variety of options and the competitive prices. The customer support was also very helpful." },
+        { name: 'Minal Modhvadiya', location: 'Mumbai', rating: 5, review: "Booking with BusGo was a breeze! The app is so user-friendly and I found the perfect bus in minutes. Highly recommended!" },
+        { name: 'Rishabh Tiwari', location: 'Delhi', rating: 4, review: "Great service and comfortable journey. The live tracking feature is a game-changer. Will definitely use BusGo again." },
+        { name: 'Sweety Yadav', location: 'Ahmedabad', rating: 5, review: "I was impressed with the variety of options and the competitive prices. The customer support was also very helpful." },
     ];
     return (
         <div className="mt-16">
